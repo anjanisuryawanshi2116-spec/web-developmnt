@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Storage & Display</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            text-align: center;
+            padding-top: 40px;
+        }
+        .container {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input {
+            width: 85%;
+            padding: 10px;
+            margin: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #5b86e5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #5b86e5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Array Storage & Display</h2>
+
+    <form method="post" action="">
+        <input type="text" name="val1" placeholder="Enter Value 1" required>
+        <input type="text" name="val2" placeholder="Enter Value 2" required>
+        <input type="text" name="val3" placeholder="Enter Value 3" required>
+        <input type="text" name="val4" placeholder="Enter Value 4" required>
+        <input type="text" name="val5" placeholder="Enter Value 5" required>
+        <br>
+        <button type="submit" name="submit">Submit</button>
+    </form>
+
+    <?php
+    if (isset($_POST['submit'])) {
+
+        $arr = [
+            $_POST['val1'],
+            $_POST['val2'],
+            $_POST['val3'],
+            $_POST['val4'],
+            $_POST['val5']
+        ];
+
+        echo "<table>";
+        echo "<tr><th>Index</th><th>Value</th></tr>";
+
+        foreach ($arr as $index => $value) {
+            echo "<tr>";
+            echo "<td>$index</td>";
+            echo "<td>$value</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+    }
+    ?>
+</div>
+
+</body>
+</html>
