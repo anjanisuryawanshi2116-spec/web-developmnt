@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h2>Simple Calculator using JavaScript</h2>
+
+<script>
+
+    // 🔹 Function to perform calculation
+    function calculate(a, b, operator) {
+
+        let result;
+
+        // 🔹 switch-case to check operator
+        switch (operator) {
+
+            case '+':
+                result = a + b;
+                break;
+
+            case '-':
+                result = a - b;
+                break;
+
+            case '*':
+                result = a * b;
+                break;
+
+            case '/':
+                if (b != 0) {
+                    result = a / b;
+                } else {
+                    return "Error: Cannot divide by zero";
+                }
+                break;
+
+            default:
+                return "Error: Invalid operator";
+        }
+
+        return result;
+    }
+
+    // 🔹 Taking input from user
+    let num1 = parseFloat(prompt("Enter first number:"));
+    let num2 = parseFloat(prompt("Enter second number:"));
+    let op = prompt("Enter operator (+, -, *, /):");
+
+    // 🔹 Calling function
+    let output = calculate(num1, num2, op);
+
+    // 🔹 Display result
+    document.write("<h3>Result: " + output + "</h3>");
+
+</script>
+
+</body>
+</html>
