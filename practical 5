@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Responsive Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🔹 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">TechWorld</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 🔹 HERO SECTION -->
+<div class="bg-light text-center p-5">
+    <h1>Welcome to TechWorld</h1>
+    <p>Your responsive Bootstrap learning page</p>
+    <button class="btn btn-primary">Get Started</button>
+</div>
+
+<!-- 🔹 GRID SECTION -->
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- Card 1 -->
+        <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">Learn HTML, CSS, JavaScript and frameworks.</p>
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">UI/UX Design</h5>
+                    <p class="card-text">Design modern and user-friendly interfaces.</p>
+                    <a href="#" class="btn btn-warning">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Data Science</h5>
+                    <p class="card-text">Work with data analysis and machine learning.</p>
+                    <a href="#" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔹 TABLE SECTION -->
+<div class="container mt-5">
+    <h2 class="text-center mb-3">Student Table</h2>
+
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>CS</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>IT</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>AI</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>© 2026 TechWorld | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
