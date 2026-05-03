@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Example</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: blue;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color:red; text-align:center;">My Styled Web Page</h1>
+
+    <h2>Student Details</h2>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>20</td>
+            <td>CS</td>
+        </tr>
+        <tr>
+            <td>Emma</td>
+            <td>21</td>
+            <td>IT</td>
+        </tr>
+    </table>
+
+</body>
+</html>
