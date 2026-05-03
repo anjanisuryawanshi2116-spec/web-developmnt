@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulation Tool</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .box {
+            text-align: left;
+            margin-top: 15px;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .value {
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+<?php
+
+$string = "Hello World PHP";
+
+$length = strlen($string);
+$reverse = strrev($string);
+$substring = substr($string, 6, 5);
+
+?>
+
+<div class="card">
+
+    <h2>🔤 String Manipulation Tool</h2>
+
+    <div class="box">
+        <p><span class="label">Original String:</span><br>
+        <span class="value"><?php echo $string; ?></span></p>
+    </div>
+
+    <div class="box">
+        <p><span class="label">Length:</span><br>
+        <span class="value"><?php echo $length; ?></span></p>
+    </div>
+
+    <div class="box">
+        <p><span class="label">Reversed String:</span><br>
+        <span class="value"><?php echo $reverse; ?></span></p>
+    </div>
+
+    <div class="box">
+        <p><span class="label">Substring (6,5):</span><br>
+        <span class="value"><?php echo $substring; ?></span></p>
+    </div>
+
+</div>
+
+</body>
+</html>
