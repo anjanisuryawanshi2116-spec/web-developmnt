@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+        function validateForm() {
+
+            // Get form values
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+
+            // Email pattern (basic validation)
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Check empty fields
+            if (name == "" || email == "") {
+                alert("All fields are required!");
+                return false;
+            }
+
+            // Check email format
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            // If everything is correct
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form name="myForm" onsubmit="return validateForm()">
+
+        <!-- Name -->
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <!-- Email -->
+        <label>Email:</label><br>
+        <input type="text" name="email"><br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
