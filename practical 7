@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic DOM Web Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .card {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎯 Dynamic DOM Demo</h1>
+
+    <div class="card">
+        <h2 id="name">Name: Click to Generate</h2>
+        <p id="quote">Quote will appear here</p>
+        <p id="time">Time: --</p>
+    </div>
+
+    <button onclick="generateProfile()">Generate Profile</button>
+    <button onclick="changeTheme()">Change Theme</button>
+
+    <script>
+
+        // Function 1: Generate dynamic content
+        function generateProfile() {
+
+            // Array of names
+            let names = ["Amit", "Sara", "John", "Priya", "Ravi"];
+
+            // Array of quotes
+            let quotes = [
+                "Keep learning everyday!",
+                "Success comes with practice.",
+                "Code. Debug. Repeat.",
+                "Dream big, work hard.",
+                "Consistency is the key."
+            ];
+
+            // Random selection
+            let randomName = names[Math.floor(Math.random() * names.length)];
+            let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+            // DOM update
+            document.getElementById("name").innerHTML = "Name: " + randomName;
+            document.getElementById("quote").innerHTML = "💬 " + randomQuote;
+
+            // Show current time
+            let now = new Date();
+            document.getElementById("time").innerHTML = "Time: " + now.toLocaleTimeString();
+        }
+
+
+        // Function 2: Change theme dynamically
+        function changeTheme() {
+
+            let colors = ["#f4f4f4", "#ffeaa7", "#a29bfe", "#81ecec", "#fab1a0"];
+
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+            document.body.style.backgroundColor = randomColor;
+        }
+
+    </script>
+
+</body>
+</html>
