@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Details</title>
+</head>
+<body>
+
+    <h1><u>My Personal Details</u></h1>
+
+    <p><b>Name:</b> Anjani Suryawanshi</p>
+    <p><strong>Age:</strong> 21</p>
+    <p><i>Course:</i> Bachelor of Science in Computer Science</p>
+    <p><em>College:</em> Alard University</p>
+    <p><u>Email:</u> anjanisuryawanshi2116@example.com</p>
+
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is <b>	Anjani Suryawanshi</b>. I am a <i>computer science student</i> 
+        who loves <strong>coding</strong> and <em>learning new technologies</em>.
+    </p>
+
+</body>
+</html>
