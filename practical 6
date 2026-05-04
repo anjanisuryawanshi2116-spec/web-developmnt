@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Validation</title>
-
-    <script>
-        function validateForm() {
-
-            // Get form values
-            let name = document.forms["myForm"]["name"].value;
-            let email = document.forms["myForm"]["email"].value;
-
-            // Email pattern (basic validation)
-            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            // Check empty fields
-            if (name == "" || email == "") {
-                alert("All fields are required!");
-                return false;
-            }
-
-            // Check email format
-            if (!email.match(emailPattern)) {
-                alert("Please enter a valid email address!");
-                return false;
-            }
-
-            // If everything is correct
-            alert("Form submitted successfully!");
-            return true;
-        }
-    </script>
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 250px;
+    }
+    button {
+      padding: 8px 15px;
+    }
+  </style>
 </head>
-
 <body>
 
-    <h2>Registration Form</h2>
+<h2>Registration Form</h2>
 
-    <form name="myForm" onsubmit="return validateForm()">
+<form onsubmit="return validateForm()">
+  
+  <input type="text" id="name" placeholder="Enter Name">
+  <div id="nameError" class="error"></div>
 
-        <!-- Name -->
-        <label>Name:</label><br>
-        <input type="text" name="name"><br><br>
+  <input type="text" id="email" placeholder="Enter Email">
+  <div id="emailError" class="error"></div>
 
-        <!-- Email -->
-        <label>Email:</label><br>
-        <input type="text" name="email"><br><br>
+  <button type="submit">Submit</button>
 
-        <!-- Submit -->
-        <input type="submit" value="Submit">
+</form>
 
-    </form>
+<script>
+function validateForm() {
+
+  // Get values
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+
+  // Error fields
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
+
+  // Reset errors
+  nameError.innerText = "";
+  emailError.innerText = "";
+
+  let isValid = true;
+
+  // Check empty name
+  if (name === "") {
+    nameError.innerText = "Name cannot be empty";
+    isValid = false;
+  }
+
+  // Check empty email
+  if (email === "") {
+    emailError.innerText = "Email cannot be empty";
+    isValid = false;
+  } 
+  else {
+    // Email pattern validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      emailError.innerText = "Invalid email format";
+      isValid = false;
+    }
+  }
+
+  return isValid; // if false → form will not submit
+}
+</script>
 
 </body>
 </html>
