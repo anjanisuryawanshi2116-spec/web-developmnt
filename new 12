@@ -1,0 +1,11 @@
+<?php
+// Step 1: Store values in an array
+$fruits = array("Apple", "Banana", "Mango", "Orange", "Grapes");
+
+// Step 2: Display values using loop
+echo "<h2>Fruits List</h2>";
+
+foreach ($fruits as $fruit) {
+    echo $fruit . "<br>";
+}
+?>
