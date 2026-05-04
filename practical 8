@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Calculator</title>
+  <title>Simple Calculator</title>
 </head>
 <body>
 
-<h2>Simple Calculator using JavaScript</h2>
+<h2>Simple Calculator</h2>
 
 <script>
+// Function to perform calculation
+function calculate(num1, num2, operator) {
+  let result;
 
-    // 🔹 Function to perform calculation
-    function calculate(a, b, operator) {
+  switch (operator) {
+    case "+":
+      result = num1 + num2;
+      break;
 
-        let result;
+    case "-":
+      result = num1 - num2;
+      break;
 
-        // 🔹 switch-case to check operator
-        switch (operator) {
+    case "*":
+      result = num1 * num2;
+      break;
 
-            case '+':
-                result = a + b;
-                break;
+    case "/":
+      if (num2 !== 0) {
+        result = num1 / num2;
+      } else {
+        result = "Cannot divide by zero";
+      }
+      break;
 
-            case '-':
-                result = a - b;
-                break;
+    default:
+      result = "Invalid operator";
+  }
 
-            case '*':
-                result = a * b;
-                break;
+  return result;
+}
 
-            case '/':
-                if (b != 0) {
-                    result = a / b;
-                } else {
-                    return "Error: Cannot divide by zero";
-                }
-                break;
+// Taking input from user
+let num1 = parseFloat(prompt("Enter first number:"));
+let num2 = parseFloat(prompt("Enter second number:"));
+let operator = prompt("Enter operator (+, -, *, /):");
 
-            default:
-                return "Error: Invalid operator";
-        }
+// Calling function
+let output = calculate(num1, num2, operator);
 
-        return result;
-    }
+// Display result
+alert("Result: " + output);
 
-    // 🔹 Taking input from user
-    let num1 = parseFloat(prompt("Enter first number:"));
-    let num2 = parseFloat(prompt("Enter second number:"));
-    let op = prompt("Enter operator (+, -, *, /):");
-
-    // 🔹 Calling function
-    let output = calculate(num1, num2, op);
-
-    // 🔹 Display result
-    document.write("<h3>Result: " + output + "</h3>");
-
+console.log("Result: " + output);
 </script>
 
 </body>
